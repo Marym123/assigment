@@ -5,10 +5,10 @@
         </p>
     </div>
     <div *ngIf="taskId">
-        <h2 class="text-center"> Detials of {{task.name}} </h2>
+        <h2 class="text-center"> Details of {{task.name}} </h2>
         <input type="text" class="form-control" placeholder="Task name" [(ngModel)]="task.name">
         <textarea type="text" class="form-control" placeholder="Task description" [(ngModel)]="task.description"></textarea>
-        <input type="text" class="form-control" placeholder="Task due date" [(ngModel)]="task.dueDate">
+        <input type="date" class="form-control" placeholder="Task due date" [(ngModel)]="task.dueDate">
         <button class="btn btn-primary" (click)="editTask()">Edit task</button>
         <a class="btn btn-info" routerLink="/"> Cancel</a>
     </div>

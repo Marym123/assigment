@@ -11,7 +11,11 @@
         <ul class="list-group">
             <li class="list-group-item" *ngFor="let task of tasksService.tasks ; index as i">
                 <strong> Name : </strong>{{task.name}}
-                
+                <br>
+                <strong> Description : </strong> : {{task.description}}
+                <br>
+                <strong> DueDate : </strong> : {{task.dueDate}}
+                <br>
                 <button class="del-button btn btn-danger" (click)="deleteTask(i)">Delete</button>
                 <strong> Status : </strong><input type="checkbox" name="Task status" [(ngModel)]="task.checked" >
                 <div>
